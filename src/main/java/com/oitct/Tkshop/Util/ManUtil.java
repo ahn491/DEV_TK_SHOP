@@ -3,8 +3,6 @@ package com.oitct.Tkshop.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.oitct.Tkshop.controller.HomeController;
-
 public class ManUtil {
 	
 	/**
@@ -13,6 +11,6 @@ public class ManUtil {
 	 * 공통 유틸 클래스 
 	 * 2024.05.26 이웅주
 	 */
-public static Logger logger = LoggerFactory.getLogger(HomeController.class);
+public static Logger logger = LoggerFactory.getLogger(ManUtil.class);
 
 }
