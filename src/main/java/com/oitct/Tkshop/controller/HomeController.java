@@ -21,7 +21,7 @@ public String home(Locale locale, Model model) {
 	ManUtil.logger.info("내 말에 토를 달면 용기병으로 만들어버릴것이다");
 	ManUtil.logger.info("도시를 불태우고 서를 집어삼키면우리에게서 새로운 세계가 탄생할 것이다", locale);
 		
-	return "redirect:/home/home.do";
+	return "/home/home";
 }
 
 }
