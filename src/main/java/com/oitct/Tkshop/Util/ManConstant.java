@@ -11,6 +11,6 @@ public class ManConstant {
 	 * 공통 유틸 클래스 
 	 * 2024.05.26 이웅주
 	 */
-public static Logger logger = LoggerFactory.getLogger(ManConstant.class);
+public final static Logger logger = LoggerFactory.getLogger(ManConstant.class);
 
 }
