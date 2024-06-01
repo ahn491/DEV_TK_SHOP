@@ -23,5 +23,11 @@ public class HomeController {
 
 		return "/home/home";
 	}
-
+	
+	@ RequestMapping(value = "/", method = RequestMethod.GET)
+	public String main(Locale locale, Model model) {
+		ManConstant.logger.info("쇼핑몰 메인 페이지");
+		
+		return "/home/login_main";
+	}
 }
