@@ -30,8 +30,11 @@
 		</div>
 		
 		<div class = "modal_footer">
-			<button type = "button" class = "btn_login", onclick = "location.href = 'main.jsp'">로그인</button><!-- 로그인 버튼(클릭 시 메인 페이지로 이동) -->
-			<button type = "button" class = "btn_register", onclick = "location.href = 'register.jsp'">회원가입</button><!-- 회원가입 버튼(클릭 시 회원가입 페이지로 이동) -->
+			<!--<button type = "button" class = "btn_login", onclick = "location.href = 'main.jsp'">로그인</button><!--로그인 버튼(클릭 시 메인 페이지로 이동) -->
+			<!--<button type = "button" class = "btn_register", onclick = "location.href = 'register.jsp'">회원가입</button><!-- 회원가입 버튼(클릭 시 회원가입 페이지로 이동) -->
+			
+			<button type = "button" class = "btn_login" onclick="javascript:location.href='${contextPath}/member/main_page.do'">로그인</button><!-- 로그인 버튼(클릭 시 메인 페이지로 이동) -->
+			<button type = "button" class = "btn_register" onclick = "location.href = 'register.jsp'">회원가입</button><!-- 회원가입 버튼(클릭 시 회원가입 페이지로 이동) -->
 		</div>
 	</div>
 </body>
