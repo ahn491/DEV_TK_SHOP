@@ -21,4 +21,12 @@ public class MemberController {
 		
 		return "/home/main";
 	}
+	
+	@RequestMapping("/register.do")
+	public String register(Locale locale, Model model) {
+		
+		ManConstant.logger.info("후후후 곤란해 보이는군?");
+		
+		return "/home/register";
+	}
 }
