@@ -11,9 +11,7 @@
    
    <!-- MariaDB JDBC DataSource -->
    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-    <!--   <property name="driverClassName" value="org.mariadb.jdbc.Driver" />
-      <property name="url" value="jdbc:mariadb://127.0.0.1:3306/mraadm" /> -->
-    <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+   	<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
 	<property name="url" value="jdbc:log4jdbc:mariadb://127.0.0.1:3306/bodadm" />
       <property name="username" value="root" />
       <property name="password" value="Adndwn2@" />
@@ -28,9 +26,6 @@
    
    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
       <constructor-arg ref="sqlSessionFactory" />
-   </bean>
-   <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
-      <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
    </bean>
    
    <bean id="transactionManager"

@@ -22,22 +22,21 @@
 	</style>
 </head>
 <body>
-	<div class = "modal">
-		<div class = "modal_body">
-			<h2 align = "center">로그인</h2>
-			<h2>ID : <input type = "text" id = "login_id"></h2>
-			<h2>PW : <input type = "password" id = "login_pw"></h2>
-		</div>
+	<form id = "login" action = "${pageContext.request.contextPath}/member/login.do", method = "get">
+		<div class = "modal">
+			<div class = "modal_body">
+				<h2 align = "center">로그인</h2>
+				<h2>ID : <input type = "text" id = "login_id" name = "id"></h2>
+				<h2>PW : <input type = "password" id = "login_pw" name = "pw"></h2>
+			</div>
 		
-		<div class = "modal_footer">
-			<!--<button type = "button" class = "btn_login", onclick = "location.href = 'main.jsp'">로그인</button><!--로그인 버튼(클릭 시 메인 페이지로 이동) -->
-			<!--<button type = "button" class = "btn_register", onclick = "location.href = 'register.jsp'">회원가입</button><!-- 회원가입 버튼(클릭 시 회원가입 페이지로 이동) -->
-			
-			<button type = "button" class = "btn_login" onclick = "move_main();">로그인</button><!-- 로그인 버튼(클릭 시 메인 페이지로 이동) -->
-			<button type = "button" class = "btn_register" onclick = "move_register();">회원가입</button><!-- 회원가입 버튼(클릭 시 회원가입 페이지로 이동) -->
+			<div class = "modal_footer">
+				<button type = "button" class = "btn_login" onclick = "move_main();">로그인</button><!-- 로그인 버튼(클릭 시 메인 페이지로 이동) -->
+				<button type = "button" class = "btn_register" onclick = "move_register();">회원가입</button><!-- 회원가입 버튼(클릭 시 회원가입 페이지로 이동) -->
+				<input type = "submit" value="전송"><!-- 로그인 창 입력 정보 전송 버튼 -->
+			</div>
 		</div>
-	</div>
-	
+	</form>
 	<script>
 		<!-- 메인 페이지 이동 -->
 		function move_main() {
