@@ -9,6 +9,8 @@
 
 <select id = "memberRD" parameterType = "com.oitct.Tkshop.VO.LoginVO" resultType = "int">
 	 SELECT COUNT(1)
-	 FROM 
+	 FROM MEMBER
+	 WHERE LOGIN_ID = #{login_id}
+	 AND PASSWORD = #{password};
 </select>
 </mapper>

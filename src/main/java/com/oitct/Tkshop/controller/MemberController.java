@@ -41,17 +41,20 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/login.do")
-	public String login(LoginVO vo, Model model, @RequestParam("id") String id, @RequestParam("pw") String pw) {
+	public String login(LoginVO vo, Model model, @RequestParam("login_id") String login_id, @RequestParam("password") String password) {
 		
-		ManConstant.logger.info(vo.getLogin_id());
-		ManConstant.logger.info(id);
-		ManConstant.logger.info(pw);
+//		ManConstant.logger.info(vo.getLogin_id());
 		
-		vo.setLogin_id(id);
-		vo.setPassword(pw);
+		ManConstant.logger.info(login_id);
+		ManConstant.logger.info(password);
 		
-		memberservice.getMember(vo);
+		vo.setLogin_id(login_id);
+		vo.setPassword(password);
 		
-		return "";
+		System.out.println(vo);
+		
+		System.out.println(memberservice.getMember(vo));
+		
+		return memberservice.getMember(vo);
 	}
 }
