@@ -1,10 +1,7 @@
 package com.oitct.Tkshop.VO;
 
 public class LoginVO {
-	@Override
-	public String toString() {
-		return "LoginVO [login_id=" + login_id + ", password=" + password + "]";
-	}
+	/**/
 	String login_id;
 	String password;
 	public String getLogin_id() {
