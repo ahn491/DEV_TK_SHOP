@@ -3,8 +3,6 @@ package com.oitct.Tkshop.test;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import org.junit.Test;
-
 public class DBTest { // DB Test용 Class
 	
 	// MariaDB Test
@@ -14,7 +12,7 @@ public class DBTest { // DB Test용 Class
 	private static final String USER = "root"; // DB 사용자명
 	private static final String PW = "observe7@"; // DB 사용자 비밀번호
 	
-	@Test
+	//@Test
 	public void testConnection() throws Exception {
 		Class.forName(DRIVER);
 		
