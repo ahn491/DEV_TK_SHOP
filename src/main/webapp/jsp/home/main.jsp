@@ -10,6 +10,7 @@
 <script>
 		// 회원가입 페이지 이동
 	function move_library() {
+		//도서관 페이지로 이동 (이웅주)
 		location.href = '${pageContext.request.contextPath}/library/library_main.do';
 	}
 		

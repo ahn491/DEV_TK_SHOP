@@ -7,21 +7,21 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
    
-   <!-- MariaDB JDBC dataSource(안성훈) -->
-   <bean id = "dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <!-- MariaDB JDBC dataSource(안성훈) -->
+ <!--  <bean id = "dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
    	<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
    	<property name="url" value="jdbc:log4jdbc:mariadb://127.0.0.1:3307/bodadm"/>
    	<property name="username" value="root"/>
    	<property name="password" value="observe7@"/>
-   </bean>
+   </bean> -->
    
    <!-- MariaDB JDBC DataSource(이웅주) -->
-   <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
    	<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
 	<property name="url" value="jdbc:log4jdbc:mariadb://127.0.0.1:3306/bodadm" />
       <property name="username" value="root" />
       <property name="password" value="Adndwn2@" />
-   </bean> -->
+   </bean> 
     
    <!-- mybatis SqlSessionFactoryBean -->
    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

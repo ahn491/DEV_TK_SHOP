@@ -3,7 +3,7 @@
 <configuration>
 <mappers>
 <mapper resource="sql/Member_sql.xml" />
-
+<mapper resource="sql/Library_sql.xml" />
 </mappers>
 
 </configuration>
