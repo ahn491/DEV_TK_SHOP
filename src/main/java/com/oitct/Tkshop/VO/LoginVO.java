@@ -1,6 +1,7 @@
 package com.oitct.Tkshop.VO;
 
 public class LoginVO {
+	/* 1 */
 	String login_id;
 	String password;
 	public String getLogin_id() {

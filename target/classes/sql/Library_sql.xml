@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sql.Library_sql">
+
+
+<insert id ="LibraryWD" parameterType = "com.oitct.Tkshop.VO.BookInsertVO">
+INSERT INTO BOOKLIST
+(
+	BOOKID,
+	BOOKNAME,
+	UNITPRICE,
+	AUTHOR,
+	PUBLISHER,
+	RELEASEDATE,
+	TOTALPAGE,
+	DESCRIPTION,
+	CAREGORY,
+	UNITSINSTOCK,
+	SITUATION
+)
+VALUES
+(
+	#{bookid},
+	#{bookname},
+	#{unitprice},
+	#{author},
+	#{publisher},
+	#{releasedate},
+	#{totalpages},
+	#{description},
+	#{category},
+	#{unitsinstock},
+	#{situation}
+)
+</insert>
+</mapper>

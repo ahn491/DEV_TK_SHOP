@@ -15,6 +15,9 @@ public class MemberDAO {
 	private static final String MAPPER_NS = "sql.Member_sql";
 
 	public int memberRD(LoginVO vo) {
+		System.out.println(vo);
+		
+		System.out.println("a" + sqlMap.selectOne(MAPPER_NS + ".memberRD", vo));
 		
 		return sqlMap.selectOne(MAPPER_NS + ".memberRD", vo);
 		

@@ -15,8 +15,13 @@ public class MemberServiceImpl implements MemberService {
 	
 	public String getMember(LoginVO vo) {
 		
-		memberdao.memberRD(vo);
+		int res = memberdao.memberRD(vo);
 		
-		return "";
+		if(res == 1) {
+			
+			return "/home/main";
+		}
+		
+		return "/home/login_main";
 	}
 }
