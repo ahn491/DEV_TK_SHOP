@@ -152,7 +152,7 @@
 		<dependency>
 			<groupId>org.mariadb.jdbc</groupId>
 			<artifactId>mariadb-java-client</artifactId>
-			<version>2.4.1</version>
+			<version>3.4.0</version>
 		</dependency>
 		
 		<!-- Aspectj-Tools -->
@@ -161,7 +161,6 @@
 			<artifactId>aspectjtools</artifactId>
 			<version>${aspectj-version}</version>
 		</dependency>	
-		
 		
 		<!-- Logging : Slf4J, Log4J2, Log4JDBC-->
 		
