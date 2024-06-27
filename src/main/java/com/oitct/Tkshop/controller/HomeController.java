@@ -17,10 +17,7 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String main(Locale locale, Model model) {
 		
-		ManConstant.logger.info("쇼핑몰 로그인 페이지");
-		ManConstant.logger.info("나는 경호실의 탱크왕 안성훈이다");//logger PK1값
-		ManConstant.logger.info("내 말에 토를 달면 용기병으로 만들어버릴것이다");//logger PK2값
-		ManConstant.logger.info("도시를 불태우고 서를 집어삼키면우리에게서 새로운 세계가 탄생할 것이다", locale);
+		ManConstant.logger.info("Tomcat 구동성공 프로젝트 구동가능");
 		
 		return "/home/login_main";
 	}
