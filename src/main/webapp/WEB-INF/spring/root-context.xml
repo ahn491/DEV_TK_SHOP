@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
-		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
    
-    <!-- MariaDB JDBC dataSource(안성훈) -->
- <!--  <bean id = "dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-   	<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-   	<property name="url" value="jdbc:log4jdbc:mariadb://127.0.0.1:3307/bodadm"/>
-   	<property name="username" value="root"/>
-   	<property name="password" value="observe7@"/>
-   </bean> -->
-   
-   <!-- MariaDB JDBC DataSource(이웅주) -->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-   	<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-	<property name="url" value="jdbc:log4jdbc:mariadb://127.0.0.1:3306/bodadm" />
-      <property name="username" value="root" />
-      <property name="password" value="Adndwn2@" />
-   </bean> 
+   	<util:properties id="props" location="classpath:/config/db.properties"/>
+   		
+	<!-- MariaDB JDBC DataSource(이웅주) -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+		<property name="url" value="jdbc:mariadb://#{props['db.ip']}:#{props['db.port']}/#{props['db.name']}?serverTimezone=UTC;useUnicode=yes;characterEncoding=UTF-8" />
+		<property name="username" value="#{props['db.username']}" />
+		<property name="password" value="#{props['db.pwd']}" />
+	</bean>   
     
    <!-- mybatis SqlSessionFactoryBean -->
    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
       <property name="dataSource" ref="dataSource" />
       <property name="configLocation" value="classpath:/mybatis-config.xml" />
-        <property name="mapperLocations" value="classpath:*/mapper/mapper_test.xml" />
+         <property name="mapperLocations" value="classpath:*/mapper/mapper_test.xml" />
    </bean>
    
    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
