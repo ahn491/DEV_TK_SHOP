@@ -72,7 +72,7 @@
     <h2>영화 상세 정보</h2>
     
     <div class="form-group">
-        <img alt="" width="300" height="170" src="../images/${mv.pic_nm}">
+        <img alt="" width="300" height="170" src="../resources/images/${mv.pic_nm}">
     </div>
     
     

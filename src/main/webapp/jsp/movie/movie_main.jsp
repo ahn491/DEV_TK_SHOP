@@ -86,7 +86,7 @@ function move_detail(num)
 			 <tr onclick="window.location.href='moive_detail.do?no=<%=mv.getNum() %>'">
 			<%-- <tr onclick="move_detail(<%=mv.getNum() %>)"> --%>
 				<td><%=mv.getNum() %></td> 
-				<td><img src="../images/<%=mv.getPic_nm() %>" style="width: 300px; height: 170px;"></td>
+				<td><img src="../resources/images/<%=mv.getPic_nm() %>" style="width: 300px; height: 170px;"></td>
 				<td><%=mv.getTitle() %></td>
 				<td><%=mv.getAuthor() %></td>
 				 <td><%=mv.getContents() %></td> 

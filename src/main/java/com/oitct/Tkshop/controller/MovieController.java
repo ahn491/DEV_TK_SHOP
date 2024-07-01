@@ -16,14 +16,14 @@ import com.oitct.Tkshop.VO.MovieVO;
 import com.oitct.Tkshop.service.MovieService;
 
 @Controller
-@RequestMapping(value = "moive") //맴버공통경로
+@RequestMapping(value = "movie" , method=RequestMethod.GET) //맴버공통경로
 public class MovieController {
 
 	@Autowired
 	MovieService ms;
 	
 	
-	@RequestMapping(value = "/moive_main.do")
+	@RequestMapping(value = "/movie_main.do")
 	public String main(Locale locale, Model model, ModelAndView mav) 
 	{
 		
@@ -34,9 +34,9 @@ public class MovieController {
 		
 		model.addAttribute("list", list);
 		
-		return "/moive/movie_main";
+		return "/movie/movie_main";
 	}
-	@RequestMapping(value = "/moive_detail.do")
+	@RequestMapping(value = "/movie_detail.do")
 	public String detail(Locale locale, Model model, ModelAndView mav,@RequestParam int no) 
 	{
 		
