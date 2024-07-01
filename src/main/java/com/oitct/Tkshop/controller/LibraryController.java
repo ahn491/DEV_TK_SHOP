@@ -105,4 +105,34 @@ public class LibraryController {
 		
 	}
 	
+	/**
+	 * 도서조회 페이지로
+	 * 
+	 * @param 도서조회 페이지로
+	 * @return 
+	 */
+	@RequestMapping(value = "/move_select", method = RequestMethod.GET)
+	public String move_select(Locale locale, Model model) {
+		
+		ManConstant.logger.info("도서조회 페이지로 이동");
+		
+		return "/library/library_select";
+	}
+	
+	/**
+	 * 도서조회 페이지로
+	 * 
+	 * @param 도서조회 페이지로
+	 * @return 
+	 */
+	@RequestMapping(value = "/library_select", method = RequestMethod.POST)
+	@ResponseBody //ajax를 쓰기위한 필수 선언부
+	public String library_select(Locale locale, Model model) {
+		
+		ManConstant.logger.info("도서조회  controller");
+		
+		//libraryservice
+		return "/library/library_select";
+	}
+	
 }

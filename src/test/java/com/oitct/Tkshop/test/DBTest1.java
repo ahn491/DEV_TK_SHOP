@@ -12,9 +12,9 @@ public class DBTest1 {
 	// MariaDB Test
 	
 		private static final String DRIVER = "org.mariadb.jdbc.Driver";
-		private static final String URL = "jdbc:mariadb://130.162.136.26:3306/BODADM";
-		private static final String USER = "DEVGRP"; // DB 사용자명
-		private static final String PW = "DEVGRP11!"; // DB 사용자 비밀번호
+		private static final String URL = "jdbc:mariadb://152.70.91.210:3306/BODADM";
+		private static final String USER = "BODUSER"; // DB 사용자명
+		private static final String PW = "BODUSER11!"; // DB 사용자 비밀번호
 		
 		@Test
 		public void testConnection() throws Exception {
